@@ -108,6 +108,8 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
 
+
+
 };
 
 

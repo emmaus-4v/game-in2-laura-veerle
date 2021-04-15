@@ -9,16 +9,17 @@ Gemaakt door:
 
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
-- [ ] teken speler1
+- [x] teken speler1
 - [ ] beweeg speler1 met pijltjes
 - [ ] teken speler2
 - [ ] beweeg speler2 met a,w,s en d
-- [ ] 
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
+- [ ] van speler1 een pinguin maken
+- [ ] van speler2 een pinguin maken
 - [ ] *meer vijanden*
 - [ ] *meer obstakels*
 - [ ] *meebewegende achtergrond*
