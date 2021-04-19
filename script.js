@@ -25,6 +25,11 @@ var spelStatus = SPELEN;
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
 
+var KEY_LEFT = 37;
+var KEY_RIGHT = 39;
+var KEY_DOWN = 40;
+var KEY_UP = 38;
+
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
@@ -107,11 +112,20 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
+    if (keyIsDown(KEY_LEFT)){
+        spelerX -= 5;
+    }
+    if (keyIsDown(KEY_RIGHT)){
+        spelerX += 5;
+    }
+    if (keyIsDown(KEY_DOWN)){
+        spelerY += 5;
+    }
+    if (keyIsDown(KEY_UP)){
+        spelerY -= 5;
+    }
 
-
-
-};
-
+}
 
 /**
  * Zoekt uit of de vijand is geraakt

@@ -10,9 +10,10 @@ Gemaakt door:
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [x] teken speler1
-- [ ] beweeg speler1 met pijltjes
+- [x] beweeg speler1 met pijltjes
 - [ ] teken speler2
 - [ ] beweeg speler2 met a,w,s en d
+- [ ] parcour maken
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
 - [ ] uitlegscherm
