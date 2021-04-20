@@ -53,6 +53,8 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill(0, 200, 255);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill(0, 150, 255);
+  rect(20, 550, width - 2 * 20, 150);
 };
 
 
@@ -195,6 +197,7 @@ function draw() {
       }
 
       tekenVeld();
+
       tekenVijand(vijandX, vijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
