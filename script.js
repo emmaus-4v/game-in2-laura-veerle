@@ -94,20 +94,29 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler1 = function(x, y) {
-  fill("black");
+  fill("black"); // lichaam speler1
   ellipse(x, y, 50, 50);
-  ellipse(x, y + 50, 70, 70);
-  fill("orange")
+  ellipse(x, y + 50, 60, 70);
+  fill("orange"); //snavel en voeten
   ellipse(x, y+5, 30, 10);
+  ellipse(x-20, y+85, 30, 10)
+  ellipse(x+20, y+85, 30, 10)
+  fill("white"); //buik
+  ellipse(x, y+50, 30, 45);
+
 
 };
 
 var tekenSpeler2 = function(x, y) {
-  fill("purple");
+  fill("purple"); //lichaam speler2
   ellipse(x, y, 50, 50);
-  ellipse(x, y + 50, 70, 70);
-  fill("orange")
+  ellipse(x, y + 50, 60, 70);
+  fill("orange"); // snavel en voeten
   ellipse(x, y+5, 30, 10);
+  ellipse(x-20, y+85, 30, 10)
+  ellipse(x+20, y+85, 30, 10)
+  fill("white"); //buik
+  ellipse(x, y+50, 30, 45);
 
 };
 

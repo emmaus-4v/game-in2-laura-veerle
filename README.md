@@ -13,7 +13,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] beweeg speler1 met pijltjes
 - [x] teken speler2
 - [x] beweeg speler2 met a,w,s en d
-- [ ] parcour maken
+- [ ] doolhof maken
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
 - [ ] uitlegscherm
