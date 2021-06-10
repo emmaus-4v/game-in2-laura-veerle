@@ -20,7 +20,7 @@
 const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
-var spelStatus = SPELEN;
+var spelStatus = UITLEG;
 
 var spelerX1 = 200; // x-positie van speler1
 var spelerY1 = 100; // y-positie van speler1
@@ -37,6 +37,9 @@ var KEY_A = 65;
 var KEY_D = 68;
 var KEY_S = 83;
 var KEY_W = 87;
+
+var ENTER = 13;
+
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
@@ -225,6 +228,16 @@ function setup() {
  */
 function draw() {
   switch (spelStatus) {
+
+    case UITLEG:
+        background("blue");
+        textSize(20);
+        text("Gebruik de pijltjes om de zwarte pingiun te bewegen", 420, 300, 500, 400)
+
+        if (keyIsDown(13)) {
+            spelStatus = SPELEN
+        }
+
     case SPELEN:
       beweegVijand();
       beweegKogel();
