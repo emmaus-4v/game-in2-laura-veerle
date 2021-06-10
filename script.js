@@ -109,12 +109,21 @@ var tekenSpeler1 = function(x, y) {
   fill("black"); // lichaam speler1
   ellipse(x, y, 50, 50);
   ellipse(x, y + 50, 60, 70);
+  fill("white"); //ogen
+  ellipse(x-10, y-5, 15, 15); //rechteroog
+  ellipse(x+10, y-5, 15, 15); //linkeroog
+  fill("black")
+  ellipse(x-10, y-5, 5, 5); //rechteroog puntje
+  ellipse(x+10, y-5, 5, 5); //linkeroog puntje
   fill("orange"); //snavel en voeten
   ellipse(x, y+5, 30, 10);
   ellipse(x-20, y+85, 30, 10)
   ellipse(x+20, y+85, 30, 10)
   fill("white"); //buik
   ellipse(x, y+50, 30, 45);
+  fill("black"); //vleugels
+  ellipse(x-30, y+50, 15, 45);
+  ellipse(x+30, y+50, 15, 45);
 
 
 };
@@ -123,13 +132,21 @@ var tekenSpeler2 = function(x, y) {
   fill("purple"); //lichaam speler2
   ellipse(x, y, 50, 50);
   ellipse(x, y + 50, 60, 70);
+  fill("white"); //ogen
+  ellipse(x-10, y-5, 15, 15); //rechteroog
+  ellipse(x+10, y-5, 15, 15); //linkeroog
+  fill("black")
+  ellipse(x-10, y-5, 5, 5); //rechteroog puntje
+  ellipse(x+10, y-5, 5, 5); //linkeroog puntje
   fill("orange"); // snavel en voeten
   ellipse(x, y+5, 30, 10);
   ellipse(x-20, y+85, 30, 10)
   ellipse(x+20, y+85, 30, 10)
   fill("white"); //buik
   ellipse(x, y+50, 30, 45);
-
+  fill("purple"); //vleugels
+  ellipse(x-30, y+50, 15, 45);
+  ellipse(x+30, y+50, 15, 45);
 };
 
 
