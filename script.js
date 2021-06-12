@@ -66,7 +66,7 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
   fill(0, 150, 255);
   rect(20, 550, width - 2 * 20, 150);
-  rect(150, 250, 50, 300); //lnker beginbalk
+  rect(150, 250, 50, 300); //linker beginbalk
   rect(150, 20, 50, 70); // linker kleine beginbalk
   rect(1050, 250, 50, 300); // rechter beginbalk
   rect(1050, 20, 50, 70); // rechter kleine beginbalk
@@ -184,6 +184,20 @@ var beweegSpeler1 = function() {
         spelerY1 -= 5;
     }
 
+    if (spelerX1 < 57){
+        spelerX1 = 57;
+    }
+    if (spelerX1 > 1223){
+        spelerX1 = 1223;
+    }
+    if (spelerY1 < 45){
+        spelerY1 = 45;
+    }
+
+    if (spelerY1 > 460){
+        spelerY1 = 460;
+    }
+
 }
 
 var beweegSpeler2 = function() {
@@ -198,6 +212,19 @@ var beweegSpeler2 = function() {
     }
     if (keyIsDown(KEY_W)){
         spelerY2 -= 5;
+    }
+
+    if (spelerX2 < 57){
+        spelerX2 = 57;
+    }
+    if (spelerX2 > 1223){
+        spelerX2 = 1223;
+    }
+    if (spelerY2 < 45){
+        spelerY2 = 45;
+    }
+    if (spelerY2 > 460){
+        spelerY2 = 460;
     }
 
 }

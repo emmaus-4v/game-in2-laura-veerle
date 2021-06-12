@@ -13,17 +13,16 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] beweeg speler1 met pijltjes
 - [x] teken speler2
 - [x] beweeg speler2 met a,w,s en d
-- [ ] doolhof maken
+- [x] doolhof maken
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
-- [ ] uitlegscherm
+- [x] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] van speler1 een pinguin maken
-- [ ] van speler2 een pinguin maken
-- [ ] *meer vijanden*
-- [ ] *meer obstakels*
-- [ ] *meebewegende achtergrond*
+- [x] van speler1 een pinguin maken
+- [x] van speler2 een pinguin maken
+- [ ] *steeds verschillende obstakels*
+- [ ] *leukere achtergrond*
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
 - [ ] *later uitwerken*
