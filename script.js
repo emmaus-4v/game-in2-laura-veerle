@@ -49,6 +49,12 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
+var goalX = 20;
+var goalY = 20;
+var goalW = 120;
+var goalH = 100;
+
+
 
 
 
@@ -75,6 +81,10 @@ var tekenVeld = function () {
   rect(500, 180, 50, 200); // tweede verticale balk
   rect(800, 300, 50, 250); // derde verticale balk
   rect(650, 120, 300, 50); // tweede horizontale balk
+
+  // einde
+  fill (255, 0, 0);
+  rect(goalX,goalY,goalW,goalH);
 };
 
 
@@ -125,7 +135,8 @@ var tekenSpeler1 = function(x, y) {
   ellipse(x-30, y+50, 15, 45);
   ellipse(x+30, y+50, 15, 45);
 
-
+  fill(255,0,0);
+  ellipse(x,y,10,10);
 };
 
 var tekenSpeler2 = function(x, y) {
@@ -254,9 +265,13 @@ var checkSpelerGeraakt = function() {
  * Zoekt uit of het spel is afgelopen
  * @returns {boolean} true als het spel is afgelopen
  */
-var checkGameOver = function() {
-    
-  return false;
+var checkGewonnen = function() {
+  if (spelerX1 > goalX && spelerX1 < (goalX + goalW) && spelerY1 > goalY && spelerY1 < (goalY+goalH)) {
+    return 1; // speler1 gewonnen
+  } 
+
+  return 0; // niemand gewonnen
+
 };
 
 
@@ -322,9 +337,12 @@ function draw() {
       tekenSpeler1(spelerX1, spelerY1);
       tekenSpeler2(spelerX2, spelerY2);
 
-      if (checkGameOver()) {
+      if (checkGewonnen() > 0) {
         spelStatus = GAMEOVER;
       }
       break;
+      case GAMEOVER:
+          text("De speler die gewonnen heeft is", 150,100);
+          text(checkGewonnen(), 150, 200);
   }
 }
