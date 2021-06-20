@@ -265,7 +265,8 @@ var checkSpelerGeraakt = function() {
  */
 var checkGewonnen = function() {
   if (spelerX1 > goalX && spelerX1 < (goalX + goalW) && spelerY1 > goalY && spelerY1 < (goalY+goalH)) {
-    return 1; // speler1 gewonnen
+     return 1; // speler1 gewonnen 
+     // speler1 gewonnen
   } 
   if (spelerX2 > goalX && spelerX2 < (goalX + goalW) && spelerY2 > goalY && spelerY2 < (goalY+goalH)) {
     return 2; // speler2 gewonnen
@@ -346,6 +347,7 @@ function draw() {
           textSize(35);
           fill("white")
           text("De winnaar is pinguïn", 450, 100, 600, 100);
+          text("De zwarte pinguïn is 1, de paarse pinguïn is 2.", 350, 400, 600, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
  
