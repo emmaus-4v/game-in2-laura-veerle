@@ -25,8 +25,8 @@ var spelStatus = UITLEG;
 var spelerX1 = 90; // x-positie van speler1
 var spelerY1 = 460; // y-positie van speler1
 
-var spelerX2 = 1170; // x-positie van speler2
-var spelerY2 = 460; // y-positie van speler2
+var spelerX2 = 90; // x-positie van speler2
+var spelerY2 = 50; // y-positie van speler2
 
 var KEY_LEFT = 37;
 var KEY_RIGHT = 39;
@@ -72,8 +72,8 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
   fill(0, 150, 255);
   rect(20, 550, width - 2 * 20, 150);
-  rect(150, 250, 50, 300); //linker beginbalk
-  rect(150, 20, 50, 70); // linker kleine beginbalk
+  rect(150, 360, 50, 190); //linker beginbalk
+  rect(150, 20, 50, 190); // linker kleine beginbalk
   rect(1050, 250, 50, 300); // rechter beginbalk
   rect(1050, 20, 50, 70); // rechter kleine beginbalk
   rect(350, 380, 300, 50); // horizontale balk
