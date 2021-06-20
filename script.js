@@ -300,12 +300,16 @@ function draw() {
 
     case UITLEG:
         background("blue");
-        textSize(35);
+        fill(0, 200, 255);
+        textSize(45);
+        textFont('Calibri');
+        text("De Pinguïn Race", 450, 50, 800, 300);
         fill("white")
-        text("UITLEG", 550, 50, 200, 200)
-        text("Gebruik de pijltjes om de zwarte pinguïn te bewegen.", 150, 150, 1000, 400)
-        text("Gebruik de toetsen a, w, s en d om de paarse pinguïn te bewegen.", 50, 250, 1200, 400)
-        text("Klik op enter om het spel te starten!", 300, 350, 800, 300)
+        textSize(35);
+        text("UITLEG", 550, 130, 200, 200)
+        text("Gebruik de pijltjes om de zwarte pinguïn te bewegen.", 150, 200, 1000, 400)
+        text("Gebruik de toetsen a, w, s en d om de paarse pinguïn te bewegen.", 50, 300, 1200, 400)
+        text("Klik op enter om het spel te starten!", 300, 400, 800, 300)
 
         if (keyIsDown(ENTER)) {
             spelStatus = SPELEN
@@ -345,10 +349,12 @@ function draw() {
       case GAMEOVER:
           background("blue");
           textSize(35);
-          fill("white")
+          textFont('Calibri');
+          fill("white");
           text("De winnaar is pinguïn", 450, 100, 600, 100);
-          text("De zwarte pinguïn is 1, de paarse pinguïn is 2.", 350, 400, 600, 100);
-          text("Klik op enter om opnieuw te beginnen.", 350, 500, 600, 100);
+          text("De zwarte pinguïn is 1, de paarse pinguïn is 2.", 300, 400, 900, 100);
+          text("Klik op enter om opnieuw te beginnen.", 300, 450, 900, 100);
+          text("score is: " + score, 300, 500, 900, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
  
