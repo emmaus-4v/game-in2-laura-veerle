@@ -50,9 +50,9 @@ var vijandY = 0;   // y-positie van vijand
 var score = 0; // aantal behaalde punten
 
 var goalX = 1100;
-var goalY = 450;
-var goalW = 160;
-var goalH = 100;
+var goalY = 250;
+var goalW = 1100;
+var goalH = 90;
 
 
 
@@ -67,13 +67,14 @@ var goalH = 100;
 /**
  * Tekent het speelveld
  */
+
 var tekenVeld = function () {
   fill(0, 200, 255);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
   fill(0, 150, 255);
   rect(20, 550, width - 2 * 20, 150);
-  rect(150, 360, 50, 190); //linksonder beginbalk
-  rect(150, 20, 50, 190); // linksboven beginbalk
+  rect(150, 360, 50, 190); //linker onderste beginbalk
+  rect(150, 20, 50, 190); // linker bovenste beginbalk
   rect(1050, 250, 50, 300); // rechter beginbalk
   rect(1050, 20, 50, 70); // rechter kleine beginbalk
   rect(350, 380, 300, 50); // horizontale balk
@@ -81,10 +82,9 @@ var tekenVeld = function () {
   rect(500, 180, 50, 200); // tweede verticale balk
   rect(800, 300, 50, 250); // derde verticale balk
   rect(650, 120, 300, 50); // tweede horizontale balk
-
-  // einde
-  fill (255, 0, 0);
-  rect(goalX,goalY,goalW,goalH);
+    // einde
+  fill ("blue");
+  line(goalX, goalY, goalW, goalH);
 };
 
 
@@ -134,9 +134,6 @@ var tekenSpeler1 = function(x, y) {
   fill("black"); //vleugels
   ellipse(x-30, y+50, 15, 45);
   ellipse(x+30, y+50, 15, 45);
-
-  fill(255,0,0);
-  ellipse(x,y,10,10);
 };
 
 var tekenSpeler2 = function(x, y) {
