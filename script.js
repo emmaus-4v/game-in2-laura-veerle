@@ -365,6 +365,10 @@ function draw() {
       if (keyIsDown(ENTER)) {
             spelStatus = UITLEG
             score = 1000
+            spelerX1 = 90; // x-positie van speler1
+            spelerY1 = 460; 
+            spelerX2 = 90; // x-positie van speler2
+            spelerY2 = 45;
         }
         break;
  
