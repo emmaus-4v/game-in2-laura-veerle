@@ -300,10 +300,10 @@ function draw() {
         background("blue");
         textSize(35);
         fill("white")
-        text("uitleg", 550, 50, 200, 200)
-        text("Gebruik de pijltjes om de zwarte pinguïn te bewegen", 150, 150, 1000, 400)
-        text("Gebruik de toetsen a, w ,s en d om de paarse pinguïn te bewegen", 50, 250, 1200, 400)
-        text("klik op enter om het spel te starten", 300, 350, 800, 300)
+        text("UITLEG", 550, 50, 200, 200)
+        text("Gebruik de pijltjes om de zwarte pinguïn te bewegen.", 150, 150, 1000, 400)
+        text("Gebruik de toetsen a, w, s en d om de paarse pinguïn te bewegen.", 50, 250, 1200, 400)
+        text("Klik op enter om het spel te starten!", 300, 350, 800, 300)
 
         if (keyIsDown(ENTER)) {
             spelStatus = SPELEN
