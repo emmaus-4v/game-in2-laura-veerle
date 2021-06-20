@@ -28,6 +28,7 @@ var spelerY1 = 460; // y-positie van speler1
 var spelerX2 = 90; // x-positie van speler2
 var spelerY2 = 45; // y-positie van speler2
 
+// Toetsen
 var KEY_LEFT = 37;
 var KEY_RIGHT = 39;
 var KEY_DOWN = 40;
@@ -83,7 +84,7 @@ var tekenVeld = function () {
   rect(800, 300, 50, 250); // derde verticale balk
   rect(650, 120, 300, 50); // tweede horizontale balk
   fill("blue") // score
-  text ("score" + score, 45, 600, 50, 50) 
+  text ("score:" + score, 45, 600, 50, 50) 
   //Finish
   fill ("blue");
   rect(goalX, goalY, goalW, goalH);
@@ -225,18 +226,18 @@ var beweegSpeler2 = function() {
         spelerY2 -= 5;
     }
 
-    if (spelerX1 < 57){ //linker rand
-        spelerX1 = 57;
+    if (spelerX2 < 57){ //linker rand
+        spelerX2 = 57;
     }
-    if (spelerX1 > 1223){ // rechter rand
-        spelerX1 = 1223;
+    if (spelerX2 > 1223){ // rechter rand
+        spelerX2 = 1223;
     }
-    if (spelerY1 < 45){ // boven rand
-        spelerY1 = 45;
+    if (spelerY2 < 45){ // boven rand
+        spelerY2 = 45;
     }
 
-    if (spelerY1 > 460){ // beneden rand
-        spelerY1 = 460;
+    if (spelerY2 > 460){ // beneden rand
+        spelerY2 = 460;
     }
 
 }
@@ -273,7 +274,6 @@ var checkGewonnen = function() {
   if (spelerX2 > goalX && spelerX2 < (goalX + goalW) && spelerY2 > goalY && spelerY2 < (goalY+goalH)) {
     return 2; // speler2 gewonnen
   } 
-  return 0; // niemand gewonnen
 
 };
 
@@ -344,22 +344,24 @@ function draw() {
       tekenSpeler1(spelerX1, spelerY1);
       tekenSpeler2(spelerX2, spelerY2);
 
-      if (checkGewonnen() > 0) {
+      if (checkGewonnen() > 0) { 
         spelStatus = GAMEOVER;
       }
       break;
-      case GAMEOVER:
+      case GAMEOVER: // Eindscherm
           background("blue");
           textSize(35);
           textFont('Calibri');
           fill("white");
           text("De winnaar is pinguïn", 450, 100, 600, 100);
           text("De zwarte pinguïn is 1, de paarse pinguïn is 2.", 300, 400, 900, 100);
-          text("Klik op enter om opnieuw te beginnen.", 300, 450, 900, 100);
-          text("score is: " + score, 300, 500, 900, 100);
+          text("Klik op enter om opnieuw te beginnen.", 300, 460, 900, 100);
+          text("score is: " + score, 300, 520, 900, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
 
+
+      // Terug naar uitlegscherm  
       if (keyIsDown(ENTER)) {
             spelStatus = UITLEG
             score = 1000
