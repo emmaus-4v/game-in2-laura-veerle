@@ -351,6 +351,12 @@ function draw() {
           text("Klik op enter om opnieuw te beginnen.", 350, 500, 600, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
+
+      if (keyIsDown(ENTER)) {
+            spelStatus = UITLEG
+            score = 1000
+        }
+        break;
  
   }
 }
