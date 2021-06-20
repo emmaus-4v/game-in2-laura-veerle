@@ -25,8 +25,8 @@ var spelStatus = UITLEG;
 var spelerX1 = 90; // x-positie van speler1
 var spelerY1 = 460; // y-positie van speler1
 
-var spelerX2 = 1170; // x-positie van speler2
-var spelerY2 = 460; // y-positie van speler2
+var spelerX2 = 90; // x-positie van speler2
+var spelerY2 = 45; // y-positie van speler2
 
 var KEY_LEFT = 37;
 var KEY_RIGHT = 39;
@@ -342,7 +342,11 @@ function draw() {
       }
       break;
       case GAMEOVER:
-          text("De speler die gewonnen heeft is", 150,100);
-          text(checkGewonnen(), 150, 200);
+          background("blue");
+          textSize(35);
+          fill("white")
+          text("De winnaar is", 500, 100, 600, 100);
+          textSize(50);
+          text(checkGewonnen(), 600, 200, 50, 50);
   }
 }
