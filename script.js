@@ -348,6 +348,7 @@ function draw() {
           fill("white")
           text("De winnaar is pinguïn", 450, 100, 600, 100);
           text("De zwarte pinguïn is 1, de paarse pinguïn is 2.", 350, 400, 600, 100);
+          text("Klik op enter om opnieuw te beginnen.", 350, 500, 600, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
  
