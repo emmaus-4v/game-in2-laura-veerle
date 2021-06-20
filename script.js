@@ -88,7 +88,7 @@ var tekenVeld = function () {
   //Finish
   fill ("blue");
   rect(goalX, goalY, goalW, goalH);
-  text("finish", 1125, 145, 50, 50)
+  text("Finish!", 1125, 145, 50, 50)
 };
 
 
