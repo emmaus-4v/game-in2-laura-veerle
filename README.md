@@ -14,7 +14,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] teken speler2
 - [x] beweeg speler2 met a,w,s en d
 - [x] doolhof maken
-- [ ] punten op scherm zetten
+- [x] punten op scherm zetten
 - [x] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
