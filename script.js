@@ -47,7 +47,7 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 0;   // x-positie van vijand
 var vijandY = 0;   // y-positie van vijand
 
-var score = 0; // aantal behaalde punten
+var score = 1000; // aantal behaalde punten
 
 var goalX = 1050; // x-positie van finish
 var goalY = 90;   // y-positie van finish
@@ -82,7 +82,9 @@ var tekenVeld = function () {
   rect(500, 180, 50, 200); // tweede verticale balk
   rect(800, 300, 50, 250); // derde verticale balk
   rect(650, 120, 300, 50); // tweede horizontale balk
-    // einde
+  fill("blue") // score
+  text ("score" + score, 45, 600, 50, 50) 
+  //Finish
   fill ("blue");
   rect(goalX, goalY, goalW, goalH);
   text("finish", 1125, 145, 50, 50)
@@ -223,17 +225,18 @@ var beweegSpeler2 = function() {
         spelerY2 -= 5;
     }
 
-    if (spelerX2 < 57){
-        spelerX2 = 57;
+    if (spelerX1 < 57){ //linker rand
+        spelerX1 = 57;
     }
-    if (spelerX2 > 1223){
-        spelerX2 = 1223;
+    if (spelerX1 > 1223){ // rechter rand
+        spelerX1 = 1223;
     }
-    if (spelerY2 < 45){
-        spelerY2 = 45;
+    if (spelerY1 < 45){ // boven rand
+        spelerY1 = 45;
     }
-    if (spelerY2 > 460){
-        spelerY2 = 460;
+
+    if (spelerY1 > 460){ // beneden rand
+        spelerY1 = 460;
     }
 
 }
@@ -265,8 +268,7 @@ var checkSpelerGeraakt = function() {
  */
 var checkGewonnen = function() {
   if (spelerX1 > goalX && spelerX1 < (goalX + goalW) && spelerY1 > goalY && spelerY1 < (goalY+goalH)) {
-     return 1; // speler1 gewonnen 
-     // speler1 gewonnen
+     return 1; // speler1 gewonnen
   } 
   if (spelerX2 > goalX && spelerX2 < (goalX + goalW) && spelerY2 > goalY && spelerY2 < (goalY+goalH)) {
     return 2; // speler2 gewonnen
@@ -286,7 +288,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background("blue");
 }
 
 
@@ -298,7 +300,7 @@ function setup() {
 function draw() {
   switch (spelStatus) {
 
-    case UITLEG:
+    case UITLEG: // uitleg/beginscherm
         background("blue");
         textSize(35);
         fill("white")
