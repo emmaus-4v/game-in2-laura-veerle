@@ -49,10 +49,10 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var goalX = 1100;
-var goalY = 250;
-var goalW = 1100;
-var goalH = 90;
+var goalX = 1050; // x-positie van finish
+var goalY = 90;   // y-positie van finish
+var goalW = 50;   // breedte van finish
+var goalH = 160;  // hoogte van finish
 
 
 
@@ -75,8 +75,8 @@ var tekenVeld = function () {
   rect(20, 550, width - 2 * 20, 150);
   rect(150, 360, 50, 190); //linker onderste beginbalk
   rect(150, 20, 50, 190); // linker bovenste beginbalk
-  rect(1050, 250, 50, 300); // rechter beginbalk
-  rect(1050, 20, 50, 70); // rechter kleine beginbalk
+  rect(1050, 250, 50, 300); // rechter onderste eindbalk
+  rect(1050, 20, 50, 70); // rechter bovenste eindbalk
   rect(350, 380, 300, 50); // horizontale balk
   rect(300, 20, 50, 200); // eerste verticale balk
   rect(500, 180, 50, 200); // tweede verticale balk
@@ -84,7 +84,7 @@ var tekenVeld = function () {
   rect(650, 120, 300, 50); // tweede horizontale balk
     // einde
   fill ("blue");
-  line(goalX, goalY, goalW, goalH);
+  rect(goalX, goalY, goalW, goalH);
 };
 
 
