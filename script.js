@@ -357,6 +357,12 @@ function draw() {
           text("score is: " + score, 300, 500, 900, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
+
+      if (keyIsDown(ENTER)) {
+            spelStatus = UITLEG
+            score = 1000
+        }
+        break;
  
   }
 }
