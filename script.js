@@ -49,9 +49,9 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var goalX = 20;
+var goalX = 1100;
 var goalY = 450;
-var goalW = 130;
+var goalW = 160;
 var goalH = 100;
 
 
