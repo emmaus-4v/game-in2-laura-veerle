@@ -72,8 +72,8 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
   fill(0, 150, 255);
   rect(20, 550, width - 2 * 20, 150);
-  rect(150, 250, 50, 300); //linker beginbalk
-  rect(150, 20, 50, 70); // linker kleine beginbalk
+  rect(150, 360, 50, 190); //linksonder beginbalk
+  rect(150, 20, 50, 190); // linksboven beginbalk
   rect(1050, 250, 50, 300); // rechter beginbalk
   rect(1050, 20, 50, 70); // rechter kleine beginbalk
   rect(350, 380, 300, 50); // horizontale balk
@@ -195,20 +195,20 @@ var beweegSpeler1 = function() {
         spelerY1 -= 5;
     }
 
-    if (spelerX1 < 57){
+    if (spelerX1 < 57){ //linker rand
         spelerX1 = 57;
     }
-    if (spelerX1 > 1223){
+    if (spelerX1 > 1223){ // rechter rand
         spelerX1 = 1223;
     }
-    if (spelerY1 < 45){
+    if (spelerY1 < 45){ // boven rand
         spelerY1 = 45;
     }
 
-    if (spelerY1 > 460){
+    if (spelerY1 > 460){ // beneden rand
         spelerY1 = 460;
     }
-
+    
 }
 
 var beweegSpeler2 = function() {
@@ -269,7 +269,9 @@ var checkGewonnen = function() {
   if (spelerX1 > goalX && spelerX1 < (goalX + goalW) && spelerY1 > goalY && spelerY1 < (goalY+goalH)) {
     return 1; // speler1 gewonnen
   } 
-
+  if (spelerX2 > goalX && spelerX2 < (goalX + goalW) && spelerY2 > goalY && spelerY2 < (goalY+goalH)) {
+    return 2; // speler2 gewonnen
+  } 
   return 0; // niemand gewonnen
 
 };
@@ -345,8 +347,9 @@ function draw() {
           background("blue");
           textSize(35);
           fill("white")
-          text("De winnaar is", 500, 100, 600, 100);
+          text("De winnaar is pinguïn", 450, 100, 600, 100);
           textSize(50);
           text(checkGewonnen(), 600, 200, 50, 50);
+ 
   }
 }
